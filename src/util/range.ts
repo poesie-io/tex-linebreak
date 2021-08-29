@@ -13,6 +13,7 @@ declare global {
  */
 export function textNodesInRange(range: Range, filter: (n: Node) => boolean) {
   const root = range.commonAncestorContainer;
+  // @ts-ignore
   const nodeIter = root.ownerDocument.createTreeWalker(
     root,
     NodeFilter.SHOW_ALL, {
@@ -24,6 +25,7 @@ export function textNodesInRange(range: Range, filter: (n: Node) => boolean) {
         }
       },
     },
+    // @ts-ignore
     false /* expandEntityReferences */,
   );
 

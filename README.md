@@ -1,3 +1,17 @@
+# Thanks so much robertknight for this package
+
+This version remove all stuff we don't use and try to handle non breaking space
+
+
+To deploy: 
+
+- Change npm version in package.json 0.5.5
+- npm run build-prod
+- npm login 
+- npm run build-prod
+
+
+
 # tex-linebreak
 
 ![Build status](https://travis-ci.org/robertknight/tex-linebreak.svg?branch=master)

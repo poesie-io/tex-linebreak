@@ -10,7 +10,6 @@ for (let lang of hyphenLangs) {
 
 module.exports = {
   entry: {
-    demos: './src/demos/layout.ts',
     lib: './src',
     ...hyphenLibs,
   },

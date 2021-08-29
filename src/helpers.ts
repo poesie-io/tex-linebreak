@@ -61,7 +61,7 @@ export function layoutItemsFromString(
     if (hyphenateFn) {
       const chunks = hyphenateFn(w);
       chunks.forEach((c, i) => {
-        const b: TextBox = { type: 'box', width: measureFn(c), text: c };
+        const b: TextBox = { type: 'box', width: measureFn(c.replace("∏$", ' ')), text: c.replace("∏$", ' ') };
         items.push(b);
         if (i < chunks.length - 1) {
           const hyphen: Penalty = { type: 'penalty', width: hyphenWidth, cost: 10, flagged: true };
@@ -69,7 +69,7 @@ export function layoutItemsFromString(
         }
       });
     } else {
-      const b: TextBox = { type: 'box', width: measureFn(w), text: w };
+      const b: TextBox = { type: 'box', width: measureFn(w.replace("∏$", ' ')), text: w.replace("∏$", ' ') };
       items.push(b);
     }
   });

@@ -1,35 +1,26 @@
 {
-  "name": "tex-linebreak",
-  "version": "0.5.2",
+  "name": "tex-linebreak-poesie-io",
+  "version": "0.5.4",
   "main": "dist/lib.js",
   "license": "MIT",
   "author": {
-    "name": "Robert Knight",
-    "email": "robertknight@gmail.com"
+    "name": "Lucas Geitner",
+    "email": "lucas@poesie.io"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/robertknight/tex-linebreak.git"
+    "url": "https://github.com/poesie-io/tex-linebreak"
   },
   "devDependencies": {
-    "@types/chai": "^4.1.2",
-    "@types/mocha": "^5.0.0",
     "@types/node": "^9.6.1",
-    "chai": "^4.1.2",
     "hyphenation.en-us": "^0.2.1",
     "hypher": "^0.2.5",
-    "karma": "^2.0.2",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-mocha": "^1.3.0",
-    "karma-webpack": "^3.0.0",
-    "mocha": "^5.0.5",
     "prettier": "^1.11.1",
-    "puppeteer": "^1.3.0",
-    "ts-loader": "^4.1.0",
-    "ts-node": "^5.0.1",
-    "typescript": "^2.8.1",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13",
+    "ts-loader": "^9.2.5",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.2",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0",
     "xorshift": "^1.1.1"
   },
   "files": [
@@ -40,7 +31,6 @@
     "build-prod": "webpack --mode production",
     "build-dev": "webpack --mode development",
     "format": "prettier --write src/*.ts src/**/*.ts test/**/*.ts",
-    "prepublish": "yarn build-prod",
     "test": "karma start --single-run",
     "test-watch": "karma start --auto-watch",
     "watch": "webpack --watch --mode development"
